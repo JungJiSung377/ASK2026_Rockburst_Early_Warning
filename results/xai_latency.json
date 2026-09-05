@@ -1,0 +1,92 @@
+{
+  "model": "Cross-Timescale Attn",
+  "seed": 606,
+  "checkpoint_exists": true,
+  "attention_fusion": "add",
+  "attention_entropy": {
+    "warning_entropy_mean": 0.959354199726021,
+    "warning_entropy_std": 0.0825290049334263,
+    "normal_entropy_mean": 0.9927995136796113,
+    "normal_entropy_std": 0.007564434592920654,
+    "warning_effective_frames": 83.72480168862371,
+    "normal_effective_frames": 97.69881252664132,
+    "n_frames": 101,
+    "welch_t": -6.136225346636735,
+    "p_value": 3.630116047603848e-09,
+    "warning_narrower": true,
+    "significant_005": true,
+    "head_averaged": true
+  },
+  "attention_centroid": {
+    "warning": 0.506760278716645,
+    "normal": 0.5027946325865458
+  },
+  "attention_entropy_per_head": {
+    "warning": [
+      0.9594153440696152,
+      0.9656609974179278,
+      0.9555563643939361,
+      0.9560310898129225
+    ],
+    "normal": [
+      0.9917034581408462,
+      0.9947941100965197,
+      0.9917846002399675,
+      0.9924974024560514
+    ],
+    "warning_min": 0.9555563643939361,
+    "normal_min": 0.9917034581408462
+  },
+  "deletion_test": {
+    "5": {
+      "k": 5,
+      "mean_abs_change_top": 0.005178340710699558,
+      "mean_abs_change_random": 0.0015991281252354383,
+      "ratio": 3.238227605819702,
+      "paired_t": 41.344175648286694,
+      "p_value": 2.0477221726016566e-204,
+      "n": 838
+    },
+    "10": {
+      "k": 10,
+      "mean_abs_change_top": 0.010148032568395138,
+      "mean_abs_change_random": 0.0031566694378852844,
+      "ratio": 3.2147910594940186,
+      "paired_t": 43.887863622911226,
+      "p_value": 2.8299207045566824e-219,
+      "n": 838
+    },
+    "20": {
+      "k": 20,
+      "mean_abs_change_top": 0.019646743312478065,
+      "mean_abs_change_random": 0.0061691985465586185,
+      "ratio": 3.1846508979797363,
+      "paired_t": 48.24971859829723,
+      "p_value": 5.742899689453761e-244,
+      "n": 838
+    }
+  },
+  "latency_forward_only": {
+    "n_samples": 300,
+    "mean_ms": 1.816966850061969,
+    "std_ms": 0.060670898620867296,
+    "p50_ms": 1.8077434997394448,
+    "p95_ms": 1.8756334509816952,
+    "p99_ms": 2.0445284498782708,
+    "fps": 550.3677736145237
+  },
+  "latency_end_to_end": {
+    "stft_mean_ms": 3.346652600012021,
+    "state_feature_mean_ms": 1.7179606699937722,
+    "transfer_mean_ms": 0.3975602001082734,
+    "inference_mean_ms": 1.9070121598997503,
+    "end_to_end_mean_ms": 7.369185630013817,
+    "end_to_end_p95_ms": 7.619837601214385,
+    "segment_duration_ms": 39.298295974731445,
+    "segment_duration_source": "\uc2e4\uce21",
+    "segment_duration_nominal_ms": 37.5,
+    "realtime_factor": 5.332786816317146,
+    "device": "GPU: NVIDIA A100-SXM4-40GB",
+    "note": "\ub370\uc774\ud130 \ucde8\ub4dd \uc2dc\uac04\uc740 \ud3ec\ud568\ud558\uc9c0 \uc54a\uc74c. \ubcf4\uace0\ub41c \uac12\uc740 \uc704 device \uae30\uc900\uc774\uba70, \ub2e4\ub978 \ud558\ub4dc\uc6e8\uc5b4\uc5d0\uc11c\ub294 \ub2ec\ub77c\uc9c4\ub2e4."
+  }
+}

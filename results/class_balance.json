@@ -1,0 +1,24 @@
+{
+  "n_segments_raw": 4194,
+  "n_segments_used": 4131,
+  "n_cycles": 17,
+  "n_complete_cycles": 16,
+  "n_positive_raw": 1192,
+  "n_positive_used": 1192,
+  "positive_rate_pct_raw": 28.422,
+  "positive_rate_pct_used": 28.855,
+  "imbalance_ratio_neg_per_pos_used": 2.47,
+  "n_cycle_boundary": 16,
+  "n_inter_warmup": 340,
+  "ttf_min": 0.006397657096385956,
+  "ttf_max": 16.103195190429688,
+  "segment_seconds_measured": 0.039298295974731445,
+  "segments_per_cycle_mean": 246.7,
+  "cycle_seconds_mean_complete": 10.146,
+  "cycle_seconds_by_ttf_span_mean": 10.658,
+  "cycle_seconds_by_ttf_span_std": 2.649,
+  "n_cycles_in_span_mean": 15,
+  "truncated_cycles_excluded": [
+    0
+  ]
+}

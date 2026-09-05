@@ -1,0 +1,14 @@
+{
+  "n_seeds": 15,
+  "alpha": 0.05,
+  "n_main_comparisons": 24,
+  "n_significant_main": 24,
+  "rank_test_p_floor": 6.103515625e-05,
+  "rank_test_underpowered": false,
+  "classical_test": "welch",
+  "attention_fusion": "add",
+  "focal_alpha_mode": "balanced",
+  "deterministic_observed": [],
+  "fusion_ablation_tested": true,
+  "skipped": []
+}

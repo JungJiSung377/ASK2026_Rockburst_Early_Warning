@@ -1,0 +1,156 @@
+{
+  "timestamp_utc": "2026-08-30T05:53:38.864382+00:00",
+  "python_version": "3.13.15 (main, Aug  6 2026, 11:06:23) [GCC 11.4.0]",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+  "cpu_count": 12,
+  "determinism_note": "adaptive average pooling\uc758 \uc5ed\uc804\ud30c\ub294 \uacb0\uc815\ub860\uc801 CUDA \uad6c\ud604\uc774 \uc5c6\uc5b4 \uc2dc\ub4dc\ub97c \uace0\uc815\ud574\ub3c4 \ube44\ud2b8 \ub2e8\uc704 \uc7ac\ud604\uc774 \ubcf4\uc7a5\ub418\uc9c0 \uc54a\ub294\ub2e4. \ubc18\ubcf5 \uc2dc\ub4dc\uc758 \ud45c\uc900\ud3b8\ucc28\ub85c \uadf8 \ubcc0\ub3d9\uc744 \uc815\ub7c9\ud654\ud55c\ub2e4.",
+  "packages": {
+    "torch": "2.11.0+cu128",
+    "numpy": "2.1.3",
+    "scipy": "1.16.3",
+    "pandas": "2.2.3",
+    "h5py": "3.16.0",
+    "sklearn": "1.6.1",
+    "matplotlib": "3.10.0",
+    "seaborn": "0.13.2"
+  },
+  "gpu": {
+    "cuda_available": true,
+    "torch_cuda_version": "12.8",
+    "cudnn_version": 91900,
+    "device_count": 1,
+    "device_names": [
+      "NVIDIA A100-SXM4-40GB"
+    ],
+    "device0_total_memory_GB": 39.49,
+    "device0_capability": "8.0"
+  },
+  "nvidia_smi": "NVIDIA A100-SXM4-40GB, 580.82.07, 40960 MiB",
+  "experiment_config": {
+    "SEGMENT_SIZE": 150000,
+    "SAMPLING_RATE": 4000000,
+    "NPERSEG": 3000,
+    "NOVERLAP": 1500,
+    "MAX_SEGMENTS": 4195,
+    "WARNING_TTF_THRESHOLD": 3.0,
+    "STATE_FEATURE_NAMES": [
+      "rms_energy",
+      "kurtosis",
+      "peak_amplitude",
+      "crest_factor",
+      "energy_trend_slope",
+      "cumulative_energy"
+    ],
+    "TREND_WINDOW": 20,
+    "TRAIN_RATIO": 0.6,
+    "VAL_RATIO": 0.15,
+    "EXCLUDE_INCOMPLETE_CYCLES": true,
+    "BATCH_SIZE": 8,
+    "EPOCHS": 15,
+    "HP_GRID": {
+      "lr": [
+        0.001,
+        0.0003
+      ],
+      "ttf_weight": [
+        0.25,
+        1.0,
+        4.0
+      ]
+    },
+    "TUNE_SEED": 2024,
+    "EVAL_SEEDS": [
+      11,
+      22,
+      33,
+      44,
+      55,
+      66,
+      77,
+      88,
+      99,
+      101,
+      202,
+      303,
+      404,
+      505,
+      606
+    ],
+    "NOISE_MEAN": 12.0,
+    "NOISE_STD": 1.5,
+    "NOISE_BAND_BINS": 8,
+    "NOISE_SEED": 20240101,
+    "FOCAL_ALPHA": 0.25,
+    "FOCAL_GAMMA": 2.0,
+    "LAMBDA_PHYSICS": 0.15,
+    "PURE_AE_BASELINE": true,
+    "TARGET_FAR_PCT": 15.0,
+    "FAR_SAFETY_FACTOR": 0.6,
+    "MATCHED_FAR_GRID": [
+      2.5,
+      5.0,
+      7.5,
+      10.0,
+      12.5,
+      15.0,
+      17.5,
+      20.0
+    ],
+    "FIX_LOADER_SEED_PER_MODEL": true,
+    "EARLY_STOP_METRIC": "composite",
+    "FOCAL_ALPHA_MODE": "balanced",
+    "FOCAL_ALPHA_BALANCED": 0.6,
+    "ATTENTION_FUSION": "add",
+    "CNN_FREQ_BANDS": 4,
+    "DROP_CYCLE_BOUNDARY_SEGMENT": true,
+    "INTER_WARMUP_POLICY": "scaled",
+    "ADD_CYCLE_CUMULATIVE_FEATURE": false,
+    "USE_TRUE_ENERGY_FEATURE": false,
+    "DROP_ALL_ALSO_DISABLES_PHYSICS": true,
+    "CLASSICAL_TEST": "welch",
+    "CLASSICAL_BOOTSTRAP": true,
+    "USE_CROSS_VALIDATION": false
+  },
+  "run_notes": {
+    "step": "step3_train_eval",
+    "seeds": [
+      11,
+      22,
+      33,
+      44,
+      55,
+      66,
+      77,
+      88,
+      99,
+      101,
+      202,
+      303,
+      404,
+      505,
+      606
+    ],
+    "epochs": 15,
+    "use_cv": false,
+    "ae_key": "X_ae",
+    "label_threshold": null,
+    "total_train_seconds": 3513.9,
+    "best_hyperparams": {
+      "Single AE": {
+        "lr": 0.001,
+        "ttf_weight": 1.0,
+        "tuned_composite": 1.4011250219328986
+      },
+      "Ours w/o Attention": {
+        "lr": 0.001,
+        "ttf_weight": 4.0,
+        "tuned_composite": 1.7747196868483628
+      },
+      "Cross-Timescale Attn": {
+        "lr": 0.001,
+        "ttf_weight": 4.0,
+        "tuned_composite": 1.775962115409465
+      }
+    }
+  }
+}

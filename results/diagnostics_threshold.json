@@ -1,0 +1,13 @@
+{
+  "target_far_nominal": 15.0,
+  "safety_factor": 0.6,
+  "target_far_selection": 9.0,
+  "threshold_mean": 0.5352761526902516,
+  "threshold_std_across_seeds": 0.025141990282727116,
+  "threshold_bootstrap_std": 0.006035586557738313,
+  "achieved_far_mean": 16.287753981328937,
+  "far_overshoot_vs_nominal": 1.2877539813289396,
+  "far_drift_vs_selection": 7.287753981328937,
+  "recall_mean": 80.98124098124097,
+  "precision_mean": 65.43020744257892
+}

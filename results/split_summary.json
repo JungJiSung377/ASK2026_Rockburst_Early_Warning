@@ -1,0 +1,75 @@
+{
+  "split_summary": {
+    "train": {
+      "n_segments": 2493,
+      "n_cycles": 10,
+      "cycles": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "n_positive": 730,
+      "n_negative": 1763,
+      "positive_rate_pct": 29.282,
+      "segment_share_pct": 60.35
+    },
+    "val": {
+      "n_segments": 800,
+      "n_cycles": 3,
+      "cycles": [
+        10,
+        11,
+        12
+      ],
+      "n_positive": 231,
+      "n_negative": 569,
+      "positive_rate_pct": 28.875,
+      "segment_share_pct": 19.37
+    },
+    "test": {
+      "n_segments": 838,
+      "n_cycles": 3,
+      "cycles": [
+        13,
+        14,
+        15
+      ],
+      "n_positive": 231,
+      "n_negative": 607,
+      "positive_rate_pct": 27.566,
+      "segment_share_pct": 20.29
+    },
+    "ratio_by_cycles": "10 : 3 : 3",
+    "ratio_by_segments_pct": "60 : 19 : 20"
+  },
+  "g_min": [
+    5.172325611114502,
+    0.6486017107963562,
+    23.0,
+    4.0946550369262695,
+    -1.0439343452453613,
+    0.0
+  ],
+  "g_max": [
+    153.76626586914062,
+    631.158935546875,
+    5444.0,
+    54.326171875,
+    2.342972993850708,
+    368.58135986328125
+  ],
+  "ttf_scale": 16.063796997070312,
+  "n_used": 4131,
+  "n_original": 4194,
+  "ae_key": "X_ae",
+  "label_threshold": 3.0,
+  "mask_features": [],
+  "loader_seed": 11
+}

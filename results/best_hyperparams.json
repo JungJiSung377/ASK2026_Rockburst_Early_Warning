@@ -1,0 +1,36 @@
+{
+  "grid": {
+    "lr": [
+      0.001,
+      0.0003
+    ],
+    "ttf_weight": [
+      0.25,
+      1.0,
+      4.0
+    ]
+  },
+  "tune_seed": 2024,
+  "tune_epochs": 8,
+  "selection_metric": "composite",
+  "early_stop_metric": "composite",
+  "normalize_ttf": true,
+  "ttf_scale": 16.063796997070312,
+  "best_per_model": {
+    "Single AE": {
+      "lr": 0.001,
+      "ttf_weight": 1.0,
+      "tuned_composite": 1.4011250219328986
+    },
+    "Ours w/o Attention": {
+      "lr": 0.001,
+      "ttf_weight": 4.0,
+      "tuned_composite": 1.7747196868483628
+    },
+    "Cross-Timescale Attn": {
+      "lr": 0.001,
+      "ttf_weight": 4.0,
+      "tuned_composite": 1.775962115409465
+    }
+  }
+}

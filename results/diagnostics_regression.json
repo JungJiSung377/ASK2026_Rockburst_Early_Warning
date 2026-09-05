@@ -1,0 +1,20 @@
+{
+  "bias_spread_s": 4.4359049797058105,
+  "bias_std_across_cycles_s": 2.427025702837631,
+  "pooled_rmse_s": 2.626967716100333,
+  "systematic_bias_rule": 0.5,
+  "systematic_bias_detected": true,
+  "n_cycles": 3,
+  "n_seeds": 15,
+  "per_cycle_bias": {
+    "13": 1.9374566872914631,
+    "14": -2.498448292414347,
+    "15": 1.4242208878199258
+  },
+  "hypothesis": "inter_cycle_shift",
+  "extrapolation": {
+    "train_ttf_max": 16.063796997070312,
+    "test_cycles_exceeding_train_range": [],
+    "max_excess_s": 0.0
+  }
+}
