@@ -151,13 +151,3 @@ FAR 12.5–15 % 를 기점으로 격차가 벌어지며, FAR 20 %에서도 GB �
 <br>
 
 ## Citation
-
-@inproceedings{jung2026rockburst,
-  title     = {Rockburst Early Warning Using Cumulative Energy History and Acoustic Emission Signals},
-  author    = {Jung, Jisung and Seol, Jaehoon and Kim, Gabeen and Lee, Quwon and Oh, JunSeok and Kim, Younggyun},
-  booktitle = {Proceedings of the Annual Symposium of the Korea Information Processing Society (ASK 2026)},
-  volume    = {33},
-  number    = {2},
-  pages     = {ooo--ooo},
-  year      = {2026}
-}
