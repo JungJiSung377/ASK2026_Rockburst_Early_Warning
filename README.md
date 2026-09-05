@@ -1,11 +1,11 @@
-:link: :1st_place_medal: ASK2026 : Rockburst Early Warning Using Cumulative Energy History and Acoustic Emission Signals
+## :link: :1st_place_medal: ASK2026 : Rockburst Early Warning Using Cumulative Energy History and Acoustic Emission Signals
 
 주제 : 에너지 누적 이력과 음향 방출 신호를 활용한 Rockburst 조기경보 모델
 
-저자 : 정지성, 설재훈, 김가빈, 이규원, 오준석, 김영균
-ACK 2026 한국정보처리학회 학술대회논문집 33권 2호 ooo-ooo(0pages)
+**저자 : 정지성, 설재훈, 김가빈, 이규원, 오준석, 김영균**
+**ACK 2026 한국정보처리학회 학술대회논문집 33권 2호 ooo-ooo(0pages)**
 <br>
-Abstract
+## Abstract
 
 구간 단위 스펙트로그램은 구간 경계를 넘는 이력을 담을 수 없다. 본 연구는 개별 구간의 스펙트로그램과 직전 20개 구간의 RMS 이동 이력을 서로 다른 두 시간척도로 처리한 뒤 결합하는 조기경보 모델 CTPF(Cross-Timescale Precursor state Fusion) 를 제안하고, 제거 실험으로 성능 향상을 유도한 정보의 종류를 규명한다.
 
