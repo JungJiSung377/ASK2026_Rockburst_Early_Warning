@@ -39,7 +39,7 @@ LANL 실험실 stick–slip 마찰 실험의 음향 방출(AE) 데이터를 사�
 * 파괴 사이클 경계는 파괴 직후 TTF가 급증하는 지점을 기준으로 검출하였다.
 
 <p align="center">
-  <img src="<[그림 주소1] (https://github.com/JungJiSung377/ASK2026_Rockburst_Early_Warning/blob/main/fig1_ae_spectrogram_noise_injection.png)>" width="500" alt="잡음이 주입된 음향 방출 신호 스펙트로그램">
+  <img src="fig1_ae_spectrogram_noise_injection.png" width="500" alt="잡음이 주입된 음향 방출 신호 스펙트로그램">
 </p>
 <p align="center"><sub>그림 1. 잡음이 주입된 음향 방출 신호 스펙트로그램 — 저주파 8개 bin(DC–10.0 kHz)에 주입된 잡음 대역을 표시</sub></p>
 
@@ -61,7 +61,7 @@ STFT 스펙트로그램은 개별 구간의 시간–주파수 특성은 반영�
 제안 모델 **CTPF**는 두 시간척도를 각각 인코딩한 뒤 융합한다. 빠른 척도 경로는 2-D CNN이 주파수 축만 축약해 시간 프레임 101개를 보존하고 LSTM이 프레임별 표현을 산출하며(→ 101 × 128), 느린 척도 경로는 MLP가 상태 벡터를 128차원 질의 표현(Query)으로 인코딩한다. 융합은 비대칭 교차 어텐션 `Attn(Q_slow, K_fast, V_fast)`으로 이루어지며, 어텐션을 거치지 않는 Q 잔차 연결을 함께 두어 두 경로의 정보를 모두 보존한다. 최종적으로 분류 헤드(경보 확률)와 회귀 헤드(잔여시간 TTF)를 동시에 산출하는 이중 과제 구조다.
 
 <p align="center">
-  <img src="<그림 주소 2>" width="550" alt="CTPF 모델 아키텍처">
+  <img src="fig2_ctpf_architecture.png" width="550" alt="CTPF 모델 아키텍처">
 </p>
 <p align="center"><sub>그림 2. 제안 모델(CTPF) 아키텍처 — 느린 척도(전조 상태 벡터) → Query, 빠른 척도(스펙트로그램) → Key/Value</sub></p>
 
@@ -117,7 +117,7 @@ STFT 스펙트로그램은 개별 구간의 시간–주파수 특성은 반영�
 저차원 상태 특징만으로는 낮은 오경보 조건에서의 판별에 그치지만, 스펙트로그램과의 결합은 일정 수준의 오경보를 허용하는 운영 영역에서 추가 재현율 향상을 제공한다. **위 값은 평가 곡선에서 읽은 상한이며 실제 배포 시 달성되는 성능이 아니다.** 실제 달성치는 6절의 Recall 80.98% / FAR 16.29%다.
 
 <p align="center">
-  <img src="<그림 주소 3>" width="500" alt="동일 오경보율 조건에서의 재현율 비교">
+  <img src="fig3_matched_far_recall.png" width="500" alt="동일 오경보율 조건에서의 재현율 비교">
 </p>
 <p align="center"><sub>그림 3. 동일한 오경보율(FAR) 조건에서의 재현율 — 15개 독립 시드 평균 ± 표준편차</sub></p>
 
@@ -133,7 +133,7 @@ STFT 스펙트로그램은 개별 구간의 시간–주파수 특성은 반영�
 4. **손실 함수·융합 방식은 유의한 차이를 만들지 않았다.** 융합 방식 차이 +0.003(15 시드, 8개 지표 전부 Holm p = 1.00), 손실 항 제거 4개 설정 전부 n.s.였으며, 파라미터를 13.4% 적게 쓰는(374,210 vs. 432,066) 단순 결합으로도 동등한 성능을 얻는다. 따라서 성능의 근거로 "물리 정보 기반"을 주장하지 않는다.
 
 <p align="center">
-  <img src="<그림 주소 4>" width="500" alt="상태 벡터 구성 요소 제거에 따른 PR-AUC 변화">
+  <img src="fig4_ablation_pr_auc.png" width="500" alt="상태 벡터 구성 요소 제거에 따른 PR-AUC 변화">
 </p>
 <p align="center"><sub>그림 4. 상태 벡터 구성 요소 제거에 따른 PR-AUC 변화 (8 시드, * = Holm 보정 후 유의)</sub></p>
 
@@ -150,13 +150,13 @@ STFT 스펙트로그램은 개별 구간의 시간–주파수 특성은 반영�
 어텐션의 가치는 성능이 아니라 검증 가능한 판단 근거에 있으며, 동등 성능의 단순 결합 구조는 이러한 시간적 근거를 제시하지 못한다.
 
 <p align="center">
-  <img src="<그림 주소 5-1>" width="480" alt="경보-평시 상태의 프레임별 어텐션 가중치 차이">
-  <img src="<그림 주소 5-2>" width="330" alt="경보-평시 상태의 정규화 엔트로피 비교">
+  <img src="fig5a_attention_diff_by_frame.png" width="480" alt="경보-평시 상태의 프레임별 어텐션 가중치 차이">
+  <img src="fig5b_attention_entropy_boxplot.png" width="330" alt="경보-평시 상태의 정규화 엔트로피 비교">
 </p>
 <p align="center"><sub>그림 5(a)(b). (a) 프레임별 어텐션 가중치 차이(95% CI) — (b) 경보/평시 상태의 정규화 엔트로피 비교</sub></p>
 
 <p align="center">
-  <img src="<그림 주소 5-3>" width="480" alt="상위 어텐션 프레임 삭제 실험 결과">
+  <img src="fig5c_attention_deletion_test.png" width="480" alt="상위 어텐션 프레임 삭제 실험 결과">
 </p>
 <p align="center"><sub>그림 5(c). 삭제 실험 — 상위 k개 어텐션 프레임 마스킹 대 무작위 k개 마스킹의 경보 확률 변화</sub></p>
 
