@@ -39,7 +39,7 @@ LANL 실험실 stick–slip 마찰 실험의 음향 방출(AE) 데이터를 사�
 * 파괴 사이클 경계는 파괴 직후 TTF가 급증하는 지점을 기준으로 검출하였다.
 
 <p align="center">
-  <img src="<(https://github.com/JungJiSung377/ASK2026_Rockburst_Early_Warning/blob/main/fig1_ae_spectrogram_noise_injection.png)>" width="500" alt="잡음이 주입된 음향 방출 신호 스펙트로그램">
+  <img src="<[그림 주소1] (https://github.com/JungJiSung377/ASK2026_Rockburst_Early_Warning/blob/main/fig1_ae_spectrogram_noise_injection.png)>" width="500" alt="잡음이 주입된 음향 방출 신호 스펙트로그램">
 </p>
 <p align="center"><sub>그림 1. 잡음이 주입된 음향 방출 신호 스펙트로그램 — 저주파 8개 bin(DC–10.0 kHz)에 주입된 잡음 대역을 표시</sub></p>
 
