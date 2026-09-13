@@ -1,6 +1,6 @@
-## 🔗 🥇 ASK2026 : Rockburst Early Warning Using Windowed RMS History and Acoustic Emission Signals
+## 🔗 🥇 ASK2026 : Rockburst Early Warning Model Using Windowed RMS History and Acoustic Emission Signals
 
-주제 : RMS 이동 이력과 음향 방출 신호를 활용한 Rockburst 조기경보 모델
+주제 : RMS 구간별 이력과 음향 방출 신호를 활용한 Rockburst 조기경보 모델
 
 * **저자 : 정지성, 설재훈, 김가빈, 이규원, 오준석, 김영균**
 * **ACK 2026 한국정보처리학회 학술대회논문집 33권 2호 ooo-ooo(0pages)**
@@ -10,7 +10,7 @@
 [![LANL AE Dataset](https://img.shields.io/badge/dataset-LANL%20Acoustic%20Emission-9cf.svg)](https://www.kaggle.com/c/LANL-Earthquake-Prediction)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-개요: 본 연구는 심부 지하 굴착 현장의 Rockburst 재해에 대한 실시간 조기경보를 위해, 개별 구간의 스펙트로그램(빠른 시간척도)과 직전 20개 구간의 RMS 이동 이력(느린 시간척도)을 각각 인코딩한 뒤 비대칭 교차 어텐션으로 융합하는 조기경보 모델 CTPF(Cross-Timescale Precursor state Fusion)를 제안하였다. 제거 실험을 통해 성능 향상의 원인이 결합 구조의 정교함이 아니라 구간 경계를 넘는 누적 이력 정보 자체에 있음을 정량적으로 규명하였다.
+개요: 본 연구는 심부 지하 굴착 현장의 Rockburst 재해에 대한 실시간 조기경보를 위해, 개별 구간의 스펙트로그램(빠른 시간척도)과 직전 20개 구간의 RMS 구간별 이력(느린 시간척도)을 각각 인코딩한 뒤 비대칭 교차 어텐션으로 융합하는 조기경보 모델 CTPF(Cross-Timescale Precursor state Fusion)를 제안하였다. 제거 실험을 통해 성능 향상의 원인이 결합 구조의 정교함이 아니라 구간 경계를 넘는 누적 이력 정보 자체에 있음을 정량적으로 규명하였다.
 
 ---
 
